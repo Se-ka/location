@@ -1,0 +1,325 @@
+body {
+	background-color: white;
+}
+
+.topLine {
+	background-image: linear-gradient(to bottom, #186DB5 0%, #1667B0 100%);
+}
+.topLine > div {
+	height: 70px;
+}
+.topLine .logo {
+	position: relative;
+	width: 210px;
+	height: 30px;
+	top: 30%;
+	left: 45%;
+}
+.topLine .wrapper {
+	position: relative;
+	top: 30%;
+	left: 44%;
+	color: #052B6D;
+	font-size: 21px;
+	font-weight: bold;
+}
+
+
+.topMenu {
+	position: relative;
+	height: 62px;
+	background-color: #003663;
+	border-top: 2px solid #022A53;
+}
+.topMenu .tabs {
+	position: absolute;
+	left: 224px;
+	top: 13px;
+	width: 600px;
+	display: inline-block;
+}
+.topMenu .tabs .tab {
+	background-color: #04264C;
+	height: 47px;
+	padding: 13px;
+	padding-left: 38px;
+	padding-right: 20px;
+	color: white;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: bold;
+	border-radius: 5px 5px 0 0;
+	position: relative;
+	cursor: pointer;
+}
+.topMenu .tabs .tab.selected {
+	background-color: #0C99C8;
+}
+.topMenu .tabs .tab .icon {
+	position: absolute;
+	top: 13px;
+	left: 8px;
+	background: url('../img/icons.png') no-repeat transparent;
+}
+.topMenu .tabs .tab .icon.findLocation {
+	width: 19px;
+	height: 26px;
+	background-position: 0 0;
+}
+.topMenu .tabs .tab .icon.species {
+	width: 26px;
+	height: 21px;
+	background-position: -21px 0;
+}
+.topMenu .tabs .tab .icon.shop {
+	width: 21px;
+	height: 20px;
+	background-position: -49px 0;
+}
+.topMenu .tabs .tab span {
+	top: 3px;
+}
+.topMenu .links {
+	position: absolute;
+	top: 22px;
+	left: 900px;
+	width: 300px;
+	color: white;
+}
+.topMenu .links > div {
+	display: inline-block;
+	margin-right: 20px;
+	cursor: pointer;
+}
+.topMenu .subMenu {
+	position: relative;
+	top: 60px;
+	left: 224px;
+	height: 53px;
+	width: 70%;
+	background-color: #0C99C8;
+	z-index: 10;
+	border-radius: 0 0 5px 5px;
+}
+.topMenu .subMenu .leftPart {
+	position: absolute;
+	top: 17px;
+	left: 0;
+}
+.topMenu .subMenu .leftPart > div {
+	display: inline-block;
+	border-right: 1px solid #59C1E4;
+	padding-right: 20px;
+	padding-left: 20px;
+	color: white;
+	cursor: pointer;
+}
+.topMenu .subMenu .leftPart > div:last-child {
+	border-right: none;
+}
+.topMenu .subMenu .rightPart {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 230px;
+	height: 52px;
+}
+.topMenu .subMenu .rightPart > .login {
+	position: absolute;
+	right: 127px;
+	top: 18px;
+	color: white;
+	cursor: pointer;
+}
+.topMenu .subMenu .rightPart > button {
+	position: absolute;
+	right: 9px;
+	top: 7px;
+	height: 37px;
+	width: 100px;
+	border-radius: 5px;
+	color: white;
+	font-weight: bold;
+	border: 1px solid #82A100;
+	background-image: linear-gradient(to bottom, #C4DA38 0%, #95B80F 100%);
+}
+
+#map {
+	width: 100%;
+	height: 400px;
+	margin-bottom: 15px;
+}
+
+.leftMenuIcons {
+	position: absolute;
+	left: 70px;
+	top: 600px;
+	width: 50px;
+	height: 170px;
+	z-index: 2;
+}
+.leftMenuIcons .icon {
+	width: 47px;
+	height: 42px;
+	margin-bottom: 3px;
+	background: url('../img/icons2.png') no-repeat transparent;
+	cursor: pointer;
+}
+.leftMenuIcons .icon1 {
+	background-position: 0 0;
+}
+.leftMenuIcons .icon2 {
+	background-position: -47px 0;
+}
+.leftMenuIcons .icon3 {
+	background-position: -94px 0;
+}
+.leftMenuIcons .icon4 {
+	background-position: -141px 0;
+}
+
+
+.theForm .col-sm-10 {
+	width: 25%;
+
+}
+
+.theForm .col-sm-2 {
+	width: 25%;
+	color: #7F7F7F;
+}
+
+.theForm .col-sm-offset-2 {
+	margin-left: 38.5%;
+}
+.theForm button {
+	height: 37px;
+	width: 120px;
+	border: 1px solid #04264C;
+	border-radius: 5px;
+	color: white;
+	font-weight: bold;
+	background-image: linear-gradient(to bottom, #C5DA39 0%, #95B80F 100%);
+}
+
+.usersBlock {
+	position: relative;
+	margin-left: 150px;
+	padding-top: 90px;
+	padding-left: 45px;
+}
+.usersBlock .title {
+	margin-bottom: 25px;
+	color: #003663;
+	font-size: 20px;
+}
+.usersBlock .hint {
+	margin-bottom: 20px;
+	color: #909090;
+}
+.usersBlock .users {
+	width: 730px;
+}
+.usersBlock .users .user {
+	height: 42px;
+	overflow: hidden;
+	background-color: #FBFFE4;
+	padding-top: 14px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+}
+.usersBlock .users .user.odd {
+	background-color: white;
+}
+.usersBlock .users .user > div {
+	display: inline-block;
+}
+.usersBlock .users .user .name {
+	color: #2F4455;
+	font-weight: bold;
+	line-height: 11px;
+	width: 200px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.usersBlock .users .user .address {
+	color: #2F4455;
+	margin-left: 40px;
+	line-height: 11px;
+	width: 300px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.usersBlock .users .user .seeLocations {
+	cursor: pointer;
+	position: relative;
+	width: 140px;
+	color: #8A9928;
+}
+.usersBlock .users .user .seeLocations .icon {
+	cursor: pointer;
+	position: absolute;
+	top: -4px;
+	right: 9px;
+	display: inline-block;
+	width: 33px;
+	height: 27px;
+	background: url('../img/icons2.png') no-repeat transparent;
+	background-position: -224px 0;
+}
+.usersBlock .users .user.odd .seeLocations .icon {
+	background-position: -188px 0;
+}
+.usersBlock .users .user .seeLocations .number {
+	cursor: pointer;
+	position: absolute;
+	top: -4px;
+	right: 20px;
+	color: white;
+	font-style: italic;
+}
+
+
+
+.container.footer {
+	width: 100%;
+}
+
+.footer {
+	margin-top: 100px;
+	border-top: 5px solid #002747;
+	background-color: #003663;
+	color: #0A8FBE;
+	padding-top: 100px;
+	padding-bottom: 50px;
+}
+
+.footer ul {
+	padding-left: 0;
+}
+
+.footer li {
+	list-style-type: none;
+	margin: 5px 0;
+	font-style: italic;
+}
+
+.footer .header {
+	color: #ECF0F3;
+	font-size: 16px;
+	font-style: normal;
+}
+
+.footer .text {
+	margin-top: 20px;
+	font-style: italic;
+}
+
+.footer .down_button {
+	font-size: 25px;
+	position: absolute;
+	top: 4px;
+	right: 32%;
+}

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>location</title>
+    <link href="bootstrap-3.3.5-dist/css/bootstrap.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+
+
+<div class="container-fluid">
+    <div class="row topLine">
+        <div class="col-lg-6 col-md-6">
+	        <img class="logo" src="img/logo.jpeg" />
+        </div>
+        <div class="col-lg-6 col-md-6">
+	        <span class="wrapper">
+                <span>Our Network</span>
+                <i class="glyphicon glyphicon-collapse-down"></i>
+	        </span>
+        </div>
+	</div>
+</div>
+
+
+<div class="topMenu">
+	<div class="tabs">
+		<div class="tab selected">
+			<div class="icon findLocation"></div>
+			<span>Find Locations</span>
+		</div>
+		<div class="tab">
+			<div class="icon species"></div>
+			<span>Our Species</span>
+		</div>
+		<div class="tab">
+			<div class="icon shop"></div>
+			<span>Shop</span>
+		</div>
+	</div>
+	<div class="links">
+		<div class="myAccount">My Account</div>
+		<div class="signUp">Sign Up</div>
+		<div class="contact">Contact</div>
+	</div>
+	<div class="subMenu">
+		<div class="leftPart">
+			<div name="listOfUsers">Find a Location</div>
+			<div name="addLocation">Add a Location</div>
+			<div>Review a Location</div>
+			<div>Review a Location</div>
+		</div>
+		<div class="rightPart">
+			<div class="login">Login Here or</div>
+			<button>Register</button>
+		</div>
+	</div>
+</div>
+
+
+<div id="map"></div>
+
+<div class="leftMenuIcons">
+	<div name="showOnlyMeOnMap" class="icon icon1"></div>
+	<div name="editMyInfo" class="icon icon2"></div>
+	<div name="showAllMarkersOnMap" class="icon icon3"></div>
+	<div name="listOfUsers" class="icon icon4"></div>
+</div>
+
+<div name="workspace"></div>
+
+
+<div name="addLocationBlock" style="display: none;" class="container-fluid">
+    <div class="form-horizontal theForm">
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">First Name*</label>
+
+            <div class="col-sm-10">
+                <input type="text" name="inputForFirstName" class="form-control" placeholder="First Name*">
+                       <!--value="jhj1234">-->
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Last Name*</label>
+
+            <div class="col-sm-10">
+                <input type="text" name="inputForLastName" class="form-control" placeholder="Last Name*" >
+                <!--value="jhj1234">-->
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Email*</label>
+
+            <div class="col-sm-10">
+                <input type="email"  class="form-control" name="email" placeholder="Email">
+                <!--value="aaa@aa.aa">-->
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Password*</label>
+
+            <div class="col-sm-10">
+                <input type="password" class="form-control" name="password" placeholder="Password">
+                <!--value="Pas22sword_">-->
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Country</label>
+
+            <div class="col-sm-10">
+                <input type="text" name="country" class="form-control" placeholder="Country">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">State</label>
+
+            <div class="col-sm-10">
+                <input type="text" name="state" class="form-control" placeholder="State">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Suburb</label>
+
+            <div class="col-sm-10">
+                <input type="text" name="suburb" class="form-control" placeholder="Suburb">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Zip Code</label>
+
+            <div class="col-sm-10">
+                <input type="text" name="zip" class="form-control" placeholder="Zip Code">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button class="btn btn-success addLocation">Add Location</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div name="editUserBlock" style="display: none;" class="container-fluid">
+	<div class="form-horizontal theForm">
+
+		<div class="form-group">
+			<label class="col-sm-2 control-label">First Name*</label>
+
+			<div class="col-sm-10">
+				<input type="text" name="inputForFirstName" class="form-control" placeholder="First Name*">
+				<!--value="jhj1234">-->
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="col-sm-2 control-label">Last Name*</label>
+
+			<div class="col-sm-10">
+				<input type="text" name="inputForLastName" class="form-control" placeholder="Last Name*" >
+				<!--value="jhj1234">-->
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label">Email*</label>
+
+			<div class="col-sm-10">
+				<input type="email"  class="form-control" name="email" placeholder="Email">
+				<!--value="aaa@aa.aa">-->
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label">Password*</label>
+
+			<div class="col-sm-10">
+				<input type="password" class="form-control" name="password" placeholder="Password">
+				<!--value="Pas22sword_">-->
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label">Country</label>
+
+			<div class="col-sm-10">
+				<input type="text" name="country" class="form-control" placeholder="Country">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label">State</label>
+
+			<div class="col-sm-10">
+				<input type="text" name="state" class="form-control" placeholder="State">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label">Suburb</label>
+
+			<div class="col-sm-10">
+				<input type="text" name="suburb" class="form-control" placeholder="Suburb">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label">Zip Code</label>
+
+			<div class="col-sm-10">
+				<input type="text" name="zip" class="form-control" placeholder="Zip Code">
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<button class="btn btn-success editInfo">Edit Info</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div name="usersBlock" style="display: none;" class="usersBlock">
+	<div class="title">Locations</div>
+	<div class="hint">Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні</div>
+	<div name="users" class="users"></div>
+</div>
+
+
+<div class="container footer">
+    <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-2">
+            <ul>
+                <li class="header">About Us</li>
+                <li>About Us</li>
+                <li>Who started us</li>
+                <li>How to help</li>
+            </ul>
+        </div>
+        <div class="col-lg-2">
+            <ul>
+                <li class="header">Account information</li>
+                <li>How to login</li>
+                <li>Create an account</li>
+                <li>Login</li>
+                <li>Join us</li>
+            </ul>
+        </div>
+        <div class="col-lg-2">
+            <ul>
+                <li class="header">About Us</li>
+                <li>About Us</li>
+                <li>Who started ir</li>
+                <li>how to help</li>
+            </ul>
+        </div>
+        <div class="col-lg-2">
+            <ul>
+                <li class="header">Account information</li>
+                <li>How to login</li>
+                <li>Create an account</li>
+                <li>Login</li>
+                <li>Join us</li>
+            </ul>
+        </div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-2">
+            <ul>
+                <li class="header">Our Network
+                    <i class="glyphicon glyphicon-collapse-down down_button"></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-8 text">
+            We've made some small changes to BlazRobar.com. To keep the qua We've made some small changes to BlazRobar.com. To keep the qua
+            We've made some small changes to BlazRobar.com. To keep the qua We've made some small changes to BlazRob
+            We've made some small changes to BlazRobar.com. To keep the qua
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+</div>
+
+
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/underscore.js"></script>
+<script src="bootstrap-3.3.5-dist/js/bootstrap.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?libraries=geometry"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
